@@ -1,4 +1,613 @@
-h1{
-    color: red;
-    font-size: 100px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+/* LOGO */
+
+.navbar-left{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left img{
+    width: 32px;
+}
+
+/* DETALLES GENERALES DEL NAVBAR */
+
+.navbar-pinterest{
+    display: flex;
+    position: fixed;    /* Para fijar navbar a la parte superior */
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #fff; /* Para que no presente transparencia la navbar cuando los demas items pasen por debajo */
+}
+
+/* LINKS DEL NAVBAR */
+.navbar-left{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 25%;
+}
+
+.boton-inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.boton-inicio:hover{
+    text-decoration-line: underline;
+}
+
+.boton-hoy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.boton-hoy:hover{
+    text-decoration-line: underline;
+}
+
+.boton-crear{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.boton-crear:hover{
+    text-decoration-line: underline;
+}
+
+/* BARRA DE BUSQUEDA */
+
+.search-box{    /* div que agrupa el finder y el icono de busqueda */
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    width: 50%;
+    height: 35px;
+    background-color: rgb(221, 221, 221);
+    border-radius: 30px;
+}
+
+.finder{    /* input de texto */
+    width: 90%; /* Tamaño de la caja de texto dentro del input */
+    height: 25px;
+    padding-left: 5px; /* Separación del icono con la caja de texto */
+    border: none;
+    background: transparent;
+}
+
+.search-box img{    /* icono de barra de busqueda */
+    display: flex;
+    width: 32px;
+    height: 32px;
+}
+
+/* ICONOS PARTE SUPERIOR IZQUIERDA DEL NAVBAR */
+.navbar-right{  /* div que agrupa los iconos de la parte derecha de la navbar*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 25%;
+}
+
+.notifications img{
+    display: flex;
+    width: 32px;
+}
+
+.message img{
+    display: flex;
+    width: 32px;
+}
+
+.profile img{
+    display: flex;
+    width: 32px;
+}
+
+.menu img{
+    display: flex;
+    width: 15px;
+}
+
+/* GALERIA DE FOTOS DE PINTEREST */
+/* caja main */
+.content{
+    padding-top: 50px; /* Para empezar debajo del navbar */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #fff;
+}
+
+/* imagen 1 */
+.card-image1{
+    margin-bottom: 10px;    /* separación entre filas */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card-info{
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-size: small;
+    color: #fff;
+    opacity: 0; /* opacidad al 0% */
+}
+
+.card-info:hover{
+    background-color: rgba(0, 0, 0, 0.26);
+    transition-duration: .5s;   /* animación de aparición */
+    opacity: 1; /* opacidad al 100% */
+}
+
+.card-info button{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: tomato;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card-info h2{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.icono-menu{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.icono-puntos{
+    position: absolute;
+    background-color: #ffffff46;
+    border-radius: 50px;
+    bottom: 28px;
+    right: 170px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.icono-descarga{
+    position: absolute;
+    background-color: #07070746;
+    border-radius: 50px;
+    bottom: 28px;
+    right: 120px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.img-fluid{
+    width: 100%;    /* Para que las imagenes se adapten al div padre */
+}
+
+/* imagen 2 */
+.card-image2{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 3 */
+.card-image3{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 4 */
+.card-image4{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 5 */
+.card-image5{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 6 */
+.card-image6{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen7 */
+.card-image7{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 8 */
+.card-image8{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 9 */
+.card-image9{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 10 */
+.card-image10{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 11 */
+.card-image11{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 12 */
+.card-image12{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 13 */
+.card-image13{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 14 */
+.card-image14{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 15 */
+.card-image15{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 16 */
+.card-image16{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 17 */
+.card-image17{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 18 */
+.card-image18{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 19 */
+.card-image19{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 20 */
+.card-image20{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 21 */
+.card-image21{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 22 */
+.card-image22{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 23 */
+.card-image23{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 24 */
+.card-image24{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 25 */
+.card-image25{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 26 */
+.card-image26{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 27 */
+.card-image27{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 28 */
+.card-image28{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 29 */
+.card-image29{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* imagen 30 */
+.card-image30{
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Footer de la pagina */
+.caja-footer{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(165, 165, 165);
+}
+
+.end-pag{
+    display: flex;
+    justify-content: space-evenly;
+    width: 1000px;
+    background-color: rgb(165, 165, 165);
+    padding: 30px;
+}
+
+/* condiciones de media queries */
+@media screen and (max-width: 750px){
+    .search-box{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .boton-inicio{
+        display: none;
+    }
+
+    .boton-hoy{
+        display: none;
+    }
+
+    .boton-crear{
+        display: none;
+    }
+
+    .navbar-right{
+        display: none;
+        
+    }
 }
