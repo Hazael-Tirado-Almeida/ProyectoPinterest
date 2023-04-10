@@ -611,3 +611,9 @@ body{
         
     }
 }
+
+@media screen and (max-width: 500px){
+    .end-pag{
+        display: none;
+    }
+}
