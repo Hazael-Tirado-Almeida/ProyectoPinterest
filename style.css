@@ -24,6 +24,7 @@ body{
 .navbar-pinterest{
     display: flex;
     position: fixed;    /* Para fijar navbar a la parte superior */
+    z-index: 1;     /* El navbar permanecera siempre en la parte superior */
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
